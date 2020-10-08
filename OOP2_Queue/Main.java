@@ -18,7 +18,7 @@ public class Main {
         Queue2.push(9);
         Queue2.show();
         Queue2.pop();
-        System.out.println("\n After Punk: ");
+        System.out.println("\n After Pop: ");
         Queue2.show();
     }
 }
