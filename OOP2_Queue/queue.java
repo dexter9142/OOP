@@ -1,52 +1,52 @@
 package OOP2_Queue;
 
-import java.util.Queue;
 import java.util.LinkedList;
 
 public class queue {
-            Queue<Integer> Queue = new LinkedList<>();
+            LinkedList<Integer> queue = new LinkedList<>();
             int maxsize;
 
 
 
         public queue(int size){
         this.maxsize = size;
+            System.out.println("queue cu param size: " + size);
         }
 
          public queue(){
-        this.maxsize = 2147483647;
+        this.maxsize = -1;
+             System.out.printf("Maximum size of second queue= " + maxsize +"\n");
         }
 
         public boolean isEmpty(){
-            if(Queue.size() == 0)
+            if(queue.size() == 0)
                 return true;
             else
                 return false;
         }
 
         public boolean isFull(){
-            if(Queue.size() == maxsize) return true;
+            if(queue.size() == maxsize) return true;
             else return false;
         }
 
         public void push(int a){
-            if(!isFull())
-            Queue.add(a);
+            if(!isFull()) {
+                queue.add(a);
+
+            }
             else System.out.println("Queue full.");
         }
 
         public void pop(){
-            Queue.remove();
+            queue.remove();
         }
 
     public void show(){
             if(!isEmpty()) {
-                for (Integer i : Queue)
+                for (Integer i : queue)
                     System.out.print(i + "\t");
             } else System.out.println("Queue is empty.");
 
     }
-
-
-
 }
