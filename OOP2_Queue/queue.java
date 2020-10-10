@@ -39,13 +39,15 @@ public class queue {
         }
 
         public void pop(){
-            queue.remove();
+            if(!isEmpty()){
+            queue.remove();}
+            else System.out.println("Queue is empty");
         }
 
     public void show(){
             if(!isEmpty()) {
-                for (Integer i : queue)
-                    System.out.print(i + "\t");
+                for (int i=0; i<queue.size(); i++)
+                    System.out.print(queue.get(i) + "\t");
             } else System.out.println("Queue is empty.");
 
     }
